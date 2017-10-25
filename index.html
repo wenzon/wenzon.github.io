@@ -1,1 +1,173 @@
-echo "Hello wssss"
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+		<meta charset="utf-8">
+		<title>消防单兵训练系统</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Bluth Company">
+
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<link href="assets/css/theme.css" rel="stylesheet">
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+		<link href="assets/css/alertify.css" rel="stylesheet">
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	  </head>
+	  <body>
+		<div id="loading" class="container-show"><img src="assets/img/loading.gif"/></div>
+		
+		<div id="wrap" class="container-hide">
+			<div class="navbar navbar-fixed-top">
+			  <div class="navbar-inner">
+				<div class="container-fluid">
+				  <div class="logo"> 
+					<img src="assets/img/logo.png" alt="Realm Admin Template">
+				  </div>
+				   <a class="btn btn-navbar visible-phone" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </a>
+				   <a class="btn btn-navbar slide_menu_left visible-tablet">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </a>
+
+				</div>
+			  </div>
+			</div>
+
+			<div class="container-fluid">
+			 
+			  <!-- Side menu -->
+			  <div class="sidebar-nav nav-collapse collapse">
+				<div class="user_side clearfix">
+				  <img src="assets/img/header.png" alt="">
+				  <h5>污超</h5>
+				  <a href="#"><i class="icon-cog"></i> 个人信息</a>        
+				</div>
+				<div class="accordion" id="accordion2">
+				  <div class="accordion-group">
+					<div class="accordion-heading">
+					  <a class="accordion-toggle active b_F79999" href="#"><i class="icon-dashboard"></i> <span>高空独木桥训练科目</span></a>
+					</div>
+				  </div>
+				  <div class="accordion-group">
+					<div class="accordion-heading">
+					  <a class="accordion-toggle b_C3F7A7" href="#"><i class="icon-dashboard"></i> <span>高层建筑救援训练科目</span></a>					
+					</div>
+				  </div>
+				  <div class="accordion-group">
+					<div class="accordion-heading">
+					  <a class="accordion-toggle b_9FDDF6" href="#"><i class="icon-dashboard"></i> <span>高层内攻救援训练科目</span></a>
+					</div>
+				  </div>
+				  <div class="accordion-group">
+					<div class="accordion-heading">
+					  <a class="accordion-toggle b_F6F1A2" href="#"><i class="icon-tasks"></i> <span>化工场景模拟训练科目</span></a>
+					</div>
+				  </div>
+				  <div class="accordion-group">
+					<div class="accordion-heading">
+					  <a class="accordion-toggle b_C1F8A9" href="#"><i class="icon-bar-chart"></i> <span>大型综合体模拟训练科目</span></a>
+					</div>
+				  </div> 
+				  <div class="accordion-group">
+					<div class="accordion-heading">
+					  <a class="accordion-toggle b_9FDDF6" href="#"><i class="icon-bullhorn"></i> <span>地下空间模拟训练科目</span></a>
+					</div>
+				  </div> 
+				  <div class="accordion-group">
+					<div class="accordion-heading">
+					  <a class="accordion-toggle b_F5C294" href="#"><i class="icon-user"></i> <span>爬梯体能训练科目</span></a>
+					</div>
+				  </div>      
+				</div>
+			  </div>
+			  <!-- /Side menu -->
+
+			  <!-- Main window -->
+			  <div class="main_container" id="dashboard_page">
+				
+				<!-- top rank  -->
+				<div class="row-fluid">
+				  <div class="overview_boxes">
+					<div class="box_row clearfix">
+					  <div class="widget-tasks-statistics">
+						<div class="userstats clearfix" style="margin-top: 25px;">
+							<a href="javascript:void(0)" data-toggle="modal" data-target="#example_modal2">
+							<div class="white">
+							  <i style="color:#E28271" class="icon-eye-open"></i>
+							  <p style="color:#E28271"></p>
+							</div>
+							<div class="widget">
+							  <input class="knob" data-width="120" data-height="120" data-displayInput=false data-readOnly=true data-thickness=".15" value="85">   
+							</div>
+							<p><strong id="count">0</strong>总次数</p>
+						  </a>
+						</div>
+					  </div>
+					  
+					  <div class="widget-tasks-statistics">
+						<div class="userstats clearfix" style="margin-top: 25px;">
+							<a href="javascript:void(0)" data-toggle="modal" data-target="#example_modal2">
+							<div class="white">
+							  <i style="color:#98E5EA" class="icon-user"></i>
+							  <p style="color:#98E5EA"></p>
+							</div>
+							<div class="widget">
+							  <input class="knob" data-width="120" data-height="120" data-displayInput=false data-readOnly=true data-thickness=".15" value="13">   
+							</div>
+							<p><strong id="highScore">100</strong>最高分</p>
+						  </a>
+						</div>
+					  </div>
+					  
+					</div> 
+				  </div>
+				</div>  
+				
+				<!-- CHARTS  -->
+				<div class="row-fluid">			  
+				  <div class="widget ">
+					<div class="widget-header">
+					  <i class="icon-credit-card"></i>
+					  <h5>最近测试分数</h5>
+
+					</div>
+					<div class="widget-body clearfix">
+					  <div style="height:274px;" id="graph" class="widget-analytics-large"></div>
+					</div>
+				  </div>
+				</div> <!-- /row-fluid -->
+
+
+			  </div>
+			  <!-- /Main window -->
+			  
+			</div><!--/.fluid-container-->
+		</div><!-- wrap ends-->
+
+		<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="assets/js/raphael-min.js"></script>
+		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+		<script type="text/javascript" src='assets/js/sparkline.js'></script>
+		<script type="text/javascript" src='assets/js/morris.min.js'></script>
+		<script type="text/javascript" src="assets/js/jquery.dataTables.min.js"></script>   
+		<script type="text/javascript" src="assets/js/jquery.masonry.min.js"></script>   
+		<script type="text/javascript" src="assets/js/jquery.imagesloaded.min.js"></script>   
+		<script type="text/javascript" src="assets/js/jquery.facybox.js"></script>   
+		<script type="text/javascript" src="assets/js/jquery.alertify.min.js"></script> 
+		<script type="text/javascript" src="assets/js/jquery.knob.js"></script>
+		<script type='text/javascript' src='assets/js/fullcalendar.min.js'></script>
+		<script type='text/javascript' src='assets/js/jquery.gritter.min.js'></script>
+		<script type="text/javascript" src="assets/js/realm.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.slimscroll.min.js"></script>
+		<script src="assets/js/dist/av-live-query.js"></script>
+	  </body>
+	</html>
